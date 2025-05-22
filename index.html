@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour toi Maserdie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+         background: radial-gradient(circle at center, #ffb6c1, #ff69b4, #ff1493);
+      overflow-x: hidden;
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+
+    body {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .maserdie-float {
+      position: absolute;
+      font-family: 'Great Vibes', cursive;
+      color: #ff80ab;
+      font-size: 2rem;
+      opacity: 0;
+      animation: flyIn 6s ease-in-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes flyIn {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 100vh, 0) scale(0.5);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(0, -100vh, 0) scale(1);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+      z-index: 0;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fromTop 1s ease-out;
+    }
+
+    @keyframes fromTop {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.9;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    p:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .btn {
+      background-color: white;
+      color: #ff4081;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
+
+    .btn:hover {
+      background-color: #ffe4ec;
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+      .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio id="loveMusic" src="/Amir_-_Complémentaires__Clip_officiel_(256k).mp3"></audio>
+
+  <div class="container">
+    <h1>Pour toi, Maserdie ❤️</h1>
+    <button class="btn" onclick="revealMessage()">Clique mon amour</button>
+    <div id="message" class="hidden">
+      <p>
+       Deux ans déjà, et chaque instant à tes côtés est un trésor simple et précieux.  
+Tu es cette douceur qui caresse mes jours, ce frisson qui habite mes nuits.  
+
+Avec toi, j’ai compris que le bonheur n’est pas dans la grandeur des choses,  
+mais dans la chaleur d’un regard, la tendresse d’un souffle,  
+le frôlement de tes mains sur ma peau.
+
+Tu es mon envie, ma paix, mon désir secret.  
+Juste toi, juste moi, et cette alchimie qui rend tout plus beau, plus vrai.
+
+Comme Mowgli dans la jungle, je me suis trouvé grâce à toi,  
+guidé par ta lumière, porté par ton amour sauvage.
+
+Il ne faut pas grand-chose pour être heureux, juste toi,  
+tes rires, tes silences, et cette passion qui brûle doucement entre nous.
+
+Je t’aime, Maserdie, pour tout ce que tu es,  
+et pour ce que nous sommes ensemble, chaque jour un peu plus.
+
+Restons dans ce bonheur simple, sensuel,  
+à savourer chaque seconde comme un cadeau.
+
+Je t’aime, aujourd’hui et pour toujours.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function createHearts() {
+      for (let i = 0; i < 100; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 10000);
+      }
+    }
+
+    function createFloatingMaserdie() {
+      for (let i = 0; i < 50; i++) {
+        const word = document.createElement("div");
+        word.className = "maserdie-float";
+        word.innerText = "Maserdie";
+        word.style.left = Math.random() * 100 + "vw";
+        word.style.top = Math.random() * 100 + "vh";
+        word.style.fontSize = (1 + Math.random() * 2) + "rem";
+        word.style.animationDelay = (Math.random() * 4) + "s";
+        document.body.appendChild(word);
+        setTimeout(() => word.remove(), 7000);
+      }
+    }
+
+    function revealMessage() {
+      const message = document.getElementById("message");
+      message.classList.remove("hidden");
+      message.style.animation = "fadeIn 2s ease-in-out";
+      createHearts();
+      createFloatingMaserdie();
+      setInterval(createHearts, 1500);
+      setTimeout(() => {
+        document.getElementById("loveMusic").play();
+      }, 30000);
+    }
+
+    // Démarrage automatique de l’effet "Maserdie" dès le chargement
+    window.addEventListener('load', () => {
+      createFloatingMaserdie();
+    });
+  </script>
+</body>
+</html>
